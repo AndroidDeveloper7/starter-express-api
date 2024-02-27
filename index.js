@@ -27,6 +27,9 @@ app.all('/', (req, res) => {
 
 app.get("/users", (req,res) => {
 
+ const num = Number(req.query.num);
+ num = num + 1
+
     const number = Number(req.query.number);
     var result = "";
 
@@ -43,6 +46,7 @@ app.get("/users", (req,res) => {
     return res.json({
         status : 1,
         data : token,
+        num : num,
         result : result
     })
 });
