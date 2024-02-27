@@ -27,7 +27,7 @@ app.all('/', (req, res) => {
 
 app.get("/users", (req,res) => {
 
- const num = Number(req.query.num);
+ var num = Number(req.query.num);
  num = num + 1
 
     const number = Number(req.query.number);
